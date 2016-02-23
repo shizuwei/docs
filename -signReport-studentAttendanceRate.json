@@ -1,0 +1,56 @@
+#  /signReport/studentAttendanceRate.json
+---
+
+## 接口说明
+---
+| 项 | 值 |
+| :------------: |:---------------|
+|    URL   |  /signReport/studentAttendanceRate.json|
+|    描述   | 学生到课率 |
+|    请求方式   | POST |
+|    需要登录   | 是  |
+|    注意事项   | 无  |
+|    其他   | 无  |
+
+## 请求参数（同花名册）
+---
+| 参数名 | 必选  | 类型 | 说明 |
+| :------------: |:---------------:| :-----:| :----- |
+|courseType |否（根据课程筛选学生时为必填项）|int |课程类型,值与课程列表返回的数据对应：1,"一对一";2,"班课";3,"视频课",4,"机构线下课";5,"试听课";|
+|courseNumber |否（根据课程筛选学生时为必填项）|Long |课程number |
+|searchKey|否|String|搜索关键字（搜索列表时不允许传空值）|
+|pageNum |否 |Integer |页号 |
+|pageSize |否 |Integer |每页显示数量 |
+```
+ 
+## 返回结果
+---
+
+```
+{
+    "msg":"succ",
+    "code": 0,
+    "data": {
+            "list":[
+                      {
+                         "studentId":11,//学员id
+                         "name":"",//名称
+                         "mobile":"",//手机号
+                         "attendanceRate":0.33//33%出勤率
+                       },
+                       {
+                         "studentId":12,//学员id
+                         "name":"",//名称
+                         "mobile":"",//手机号
+                          "attendanceRate":0.33//33%出勤率                   
+                       }
+                    ]
+         }
+    "pageDto"{
+       "count": 0,//总数
+       "curPageCount": 0,//当前页数量
+       "pageNum":1, //页号
+       "pageSize":20 //每页显示数量
+     }
+}
+```
