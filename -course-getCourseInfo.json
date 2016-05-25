@@ -1,0 +1,49 @@
+#  /course/getCourseInfo.json
+---
+
+## 接口说明
+
+
+---
+| 项 | 值 |
+| :------------: |:---------------|
+|    URL   | /course/getCourseInfo.json|
+|    描述   | 课程-获取课程信息，PC版接口  |
+|    请求方式   | POST |
+|    需要登录   | 是  |
+|    注意事项   | 无|
+|    其他   | 无  |
+
+## 请求参数
+---
+| 参数名 | 必选  | 类型 | 说明 |
+|:--------------:|:---------------:|:-------:|:----------------|
+|courseId|是|正整数|课程ID|
+ 
+ 
+
+## 返回结果
+---
+```
+{
+    "msg": "succ",
+    "code": 0,
+    "data": {
+  		"courseId":1,
+  		"courseName":"语文",
+  		"coursePrice":1.20,
+  		"maxStudent":100,
+  		"freq":40,//计划课节数
+  		"startTime":112341,
+  		"endTime":112441,
+  		"coverUrl":"http:\\ssss.com",\\封面图片URL
+  		"introduction":"课程介绍",
+  		"status":1,//0=招生中,1=已下架
+  		"address":"武汉市街道口",
+  		"lng":"111",//经度
+  		"lat":"222",//纬度
+  		teacherIds:[11,23,44]//课程老师IDs	
+    }
+}
+```
+
