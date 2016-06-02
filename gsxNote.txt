@@ -1,0 +1,13 @@
+ 终端工具：
+ vim + maven + git + ssh + mysql + ftp + iterm + wget + curl + secure CRT + 
+ 编程工具：
+ eclipse + idea(java, python) + sublime Text + sequel Pro(sql) + xcode
+ 文档工具：
+ markdown + axure RP pro(原型图工具) + gitLab + 
+ 调试工具：
+ postman + Charles(抓包) + 
+ 发布工具：
+ jenkins 
+ 编程语言：
+ java + python + shell + sql + js
+

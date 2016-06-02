@@ -1,0 +1,33 @@
+# /class/continueClass.json
+---
+
+## 接口说明
+---
+| 项 | 值 |
+| :------------: |:---------------|
+|    URL   | /class/continueClass.json |
+|    描述   | 续班  |
+|    请求方式   | POST |
+|    需要登录   | 是  |
+|    注意事项   | 无  |
+|    其他   | 无  |
+
+## 请求参数 
+---
+
+```
+{
+  "fromClassId":1,//要续班的班级id
+  "toClassId":2//续班到的班级id
+  "studentId":3//学生id
+}
+```
+
+## 返回结果
+---
+```
+{
+    "msg": "succ",
+    "code": 0
+}
+```
