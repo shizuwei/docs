@@ -6,7 +6,7 @@
 
 - 基本用法
 
-  ThreadLocal的神奇之处在于，定义一个可以内被附加到多个线程上。而且总是操作当前线程对应的那个。
+  ThreadLocal的神奇之处在于，定义一个变量可以内被附加到多个线程上。而且总是操作当前线程对应的那个变量。
 
   对一个单独的线程，一个ThreadLocal只能set一个对象。如果要多个，可以定义多个。
 
@@ -202,7 +202,7 @@
   ```
 
 
-  
+
 ```java
          
 private void replaceStaleEntry(ThreadLocal<?> key, Object value,                        										int staleSlot) {
@@ -275,7 +275,7 @@ private void replaceStaleEntry(ThreadLocal<?> key, Object value,                
 
 - 分析2
 
-  由于key是若引用，如果threadlocal的引用不清理掉，map里面entry的key会变为null, value确没有清除，如果thread依旧存在，可能导致value依旧被引用。所以要保留threadlocal的强引用，不用时remove一下。
+  由于key是若引用，如果外部的threadlocal的引用被清理掉，map里面entry的key会变为null, value却没有清除，如果thread依旧存在，可能导致value依旧被引用。所以要保留threadlocal的强引用，不用时remove一下(会删除value引用)。
 
   ```java
   new ThreadLocal<User>().set(user); //这样处理，可能会出问题
